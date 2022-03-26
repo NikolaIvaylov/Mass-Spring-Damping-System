@@ -58,7 +58,7 @@ for time in range(1, len(t)):
     previous_displacement = displacements[time-1] #get y(n-1)
     previous_velocity = velocities[time-1] #get y'(n-1)
     
-    #Use the rungeKutta4th() function:
+    #Use the rungeKutta() function:
     current_displacement, current_velocity = rungeKutta(0, previous_displacement, previous_velocity, t_step, t[time])
     
     displacements.append((current_displacement-f0)) #save the value of the current displacement
