@@ -50,6 +50,7 @@ def rungeKutta(t, u0, v0, m, b, k, force):
         #force at half a time step:
         half_force = (force[i + 1] - force[i]) / 2 + force[i]
 
+        #apply Runge-Kutta formulas to find u1-u4, v1-v4, and a1-a4:
         u1 = u[i]
         v1 = v[i]
         a1 = func(u1, v1, force[i])
